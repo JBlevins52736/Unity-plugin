@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b)",
+      "Bash(powershell -Command \"cd ''C:\\Users\\blevi\\Documents\\GitHub\\Unity-plugin'' && Get-ChildItem -Depth 1 | Select-Object -ExpandProperty Name | Sort-Object\")",
+      "Bash(powershell -Command \"Get-ChildItem -Depth 1 | Select-Object -ExpandProperty Name\")",
+      "Bash(git mv:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Read(//c/Users/blevi/Documents/GitHub/**)",
+      "Bash(tree:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
