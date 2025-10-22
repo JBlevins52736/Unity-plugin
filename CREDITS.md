@@ -20,19 +20,25 @@ This project uses various third-party assets and libraries. Below is a comprehen
 - **Notes:** All prefabs fitted with colliders, proper pivot positions, and nested spotlights
 
 ### Military Cargo Aircraft
-- **Author:** Unknown (purchased asset)
-- **Source:** Unity Asset Store (presumed)
+- **Author:** Andrii Chykrii
+- **Version:** 1.0
+- **Release Date:** May 12, 2023
+- **Price:** FREE (USD $0.00)
+- **Source:** [Unity Asset Store](https://assetstore.unity.com/packages/3d/vehicles/air/military-cargo-aircraft-250943)
 - **Location:** `Assets/Military Cargo Aircraft/`
-- **Last Modified:** May 4, 2023
-- **Description:** Military transport aircraft with cargo container
+- **File Size:** 100.9 MB
+- **Unity Version:** Originally created for Unity 2021.3.19f1
+- **Description:** Low-poly military transport aircraft with cargo container and rope accessories
 - **Contents:**
   - Military cargo aircraft model (FBX format)
   - Container and rope accessories
   - 4 material variants (A, B, C, Custom)
-  - PBR shader graphs for URP/HDRP
+  - PBR shader graphs
   - Full texture sets (BaseColor, Normal, AO, Metallic, Roughness)
   - Paint mask for custom liveries
-- **License:** Unity Asset Store License (presumed)
+- **Render Pipeline:** Built-in Render Pipeline (compatible with URP/HDRP with modifications)
+- **License:** Unity Asset Store Extension Asset License (standard EULA)
+- **Favorites:** 107+ users on Asset Store
 
 ## Unity Packages
 
@@ -158,8 +164,7 @@ All Unity packages follow the **Unity Companion License** unless otherwise noted
 
 If you are the original author or know the attribution for any of the following, please contact the repository owner:
 
-1. **Military Cargo Aircraft** - Exact asset store link or original creator unknown
-2. **Deform** - Full license and attribution information needed
+1. **Deform** - Full license and attribution information needed (appears to be from Unity Asset Store or GitHub)
 
 ## License Compliance
 
