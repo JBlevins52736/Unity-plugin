@@ -75,3 +75,6 @@ crashlytics-build.properties
 .DS_Store
 Assets.zip
 StewartPlatformJasenblevins.zip
+
+# Claude Code local settings
+.claude/settings.local.json
