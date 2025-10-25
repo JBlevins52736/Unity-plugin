@@ -27,7 +27,7 @@ public class PlatformController : MonoBehaviour
     private string endFrame = "#"; // '#' endFrame character (35) (to indicate the end of a message)
 
     private float nextSendTimestamp = 0;
-    [SerializeField] private float nextSendDelay = 0.02f; // delay in seconds (float)
+    [SerializeField] private float nextSendDelay = 0.01f; // delay in seconds (100 Hz) - increased from 0.02f for smoother motion
 
     private void Start()
     {
@@ -55,11 +55,14 @@ public class PlatformController : MonoBehaviour
         // Create SerialPort instance(this does not open the connection)
         if (serialPort == null)
         {
-            serialPort = new SerialPort(@"\\.\" + comPort); // special port formating to force Unity to recognize ports beyond COM9            
+            serialPort = new SerialPort(@"\\.\" + comPort); // special port formating to force Unity to recognize ports beyond COM9
             serialPort.BaudRate = baudRate;
             serialPort.Parity = Parity.None;
             serialPort.DataBits = 8;
             serialPort.ReadTimeout = 20; // miliseconds
+            serialPort.WriteTimeout = 50; // milliseconds - prevent blocking
+            serialPort.WriteBufferSize = 4096; // increase buffer for smoother data flow
+            serialPort.ReadBufferSize = 4096;
         }
 
         // Attempt to open the SerialPort and log any errors
@@ -117,7 +120,7 @@ public class PlatformController : MonoBehaviour
 
         if (Time.time > nextSendTimestamp)
         {
-            SendSerial(); // Send the data out on a fixed timeStamp (0.02 ms = 50 FPS)
+            SendSerial(); // Send the data out on a fixed timeStamp (0.01s = 100 Hz)
             nextSendTimestamp = Time.time + nextSendDelay; // update time stamp
         }
 

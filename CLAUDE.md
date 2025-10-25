@@ -114,13 +114,19 @@ The project contains 4 numbered challenge folders demonstrating platform concept
 ## Serial Port Configuration
 
 The drone system expects:
-- **Port**: COM7 (Windows format: `\\.\COM7` for ports >COM9)
+- **Port**: COM4 (ESP32 Silicon Labs CP210x USB-to-UART Bridge)
 - **Baud Rate**: 115200
 - **Data Format**: 8 data bits, no parity, 1 stop bit
+- **Update Rate**: 100 Hz (0.01s between sends)
+
+**To find your COM port**: Use Windows Device Manager or PowerShell:
+```powershell
+Get-CimInstance -ClassName Win32_SerialPort | Select-Object DeviceID, Name
+```
 
 **To change port**: Modify `DroneController.Start()` line 41:
 ```csharp
-PlatformController.singleton.Init("COM7", 115200);
+PlatformController.singleton.Init("COM4", 115200);
 ```
 
 ## Common Workflow

@@ -38,7 +38,7 @@ public class DroneController : Rigded_Body_Setup
 
     void Start()
     {
-        PlatformController.singleton.Init("COM7", 115200);
+        PlatformController.singleton.Init("COM4", 115200); // Updated from COM7 to COM4 for ESP32 connection
         input = GetComponent<Drone_Inputs>();
         engines = GetComponentsInChildren<IEngine>().ToList<IEngine>();
         
