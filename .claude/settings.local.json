@@ -6,7 +6,10 @@
       "Bash(git fetch:*)",
       "Bash(git checkout:*)",
       "Bash(git pull:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd full Unity project with drone delivery simulation and Stewart Platform integration\n\n- Complete Unity 2022.3.55f1 project with drone flight control system\n- Stewart Platform serial communication (COM7, 115200 baud)\n- Cargo pickup and delivery mechanics with waypoint system\n- Terrain and building assets (Residential Buildings Pack, Military Cargo Aircraft)\n- Challenge exercises for platform control learning\n- SerialThread implementation for hardware integration\n- CLAUDE.md documentation for future development\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
